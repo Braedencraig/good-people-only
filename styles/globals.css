@@ -13,6 +13,13 @@ canvas {
     width: 100!important;
 }
 
+
+/* 
+.container {
+    max-width: 1440px;
+    margin: 0
+} */
+
 code {
     font-family: 'Montserrat', sans-serif;
 }
