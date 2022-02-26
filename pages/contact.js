@@ -4,7 +4,6 @@ import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
 import { createClient } from "contentful";
 import { ThemeProvider } from "styled-components";
-import Image from "next/image";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Contact.module.css";
