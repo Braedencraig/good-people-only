@@ -4,6 +4,7 @@ import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
 import { createClient } from "contentful";
 import { ThemeProvider } from "styled-components";
+import Image from "next/image";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Contact.module.css";
@@ -193,24 +194,23 @@ export default function About({ contact, store }) {
     <ThemeProvider theme={theme}>
       <div>
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
-          <Burger open={open} setOpen={setOpen} />
-          <Logo />
-        </div>
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />{" "}
+          <Burger open={open} setOpen={setOpen} /> <Logo />
+        </div>{" "}
         <div className={styles.container}>
           <div className={styles.flex}>
             <div id="wrap">
-              <div className="glitch-card"></div>
-            </div>
+              <div className="glitch-card"> </div>{" "}
+            </div>{" "}
             <div className={styles.card}>
               <img src="/images/envelope.png" alt="envelope" />
-            </div>
+            </div>{" "}
             <a className="contact" href={`mailto:${email}`}>
-              <h3>{email}</h3>
-            </a>
-          </div>
-        </div>
-      </div>
+              <h3> {email} </h3>{" "}
+            </a>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
     </ThemeProvider>
   );
 }

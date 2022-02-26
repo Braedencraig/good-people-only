@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import favicon from "../public/favicon.ico";
 import Head from "next/head";
 import { createClient } from "contentful";
+import Image from "next/image";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
