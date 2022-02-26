@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <StyledLogo>
       <Link href="/">
-        <img src="/images/gpo.png" alt="Good People Only Logo" />
+        <img src="/images/gpo1.png" alt="Good People Only Logo" />
       </Link>
     </StyledLogo>
   );

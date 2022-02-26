@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledLogo = styled.button `
   position: absolute;
-  top: 5%;
-  right: 2rem;
+  top: 6%;
+  right: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,35 +13,35 @@ export const StyledLogo = styled.button `
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 14;
 
   &:focus {
     outline: none;
   }
   img {
-      max-width: 54px;
+    max-width: 100px;
   }
 
   div {
     width: 2rem;
     height: 0.25rem;
-    background: #FFF;
+    background: #d8d8d8;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;

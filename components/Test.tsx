@@ -10,9 +10,8 @@ export const Test: VFC = () => {
 
 
 	return (
-		<div style={{ width: '100vw', height: '100vh' }}>
-			{loaded && <TCanvas />}
-			{/* <img src="/images/logo.png" /> */}
+		<div className="hero" style={{ width: '100vw', height: '100vh', maxWidth: '1600px' }}>
+			{loaded && <TCanvas />}			
 		</div>
 	)
 }

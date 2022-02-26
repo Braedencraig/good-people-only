@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import favicon from "../public/favicon.ico";
 import Head from "next/head";
-import Image from "next/image";
+import { createClient } from "contentful";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
-// import { createClient } from "contentful";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../global";
 import { theme } from "../theme.js";
@@ -12,125 +12,94 @@ import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Home.module.css";
 import { Test } from "../components/Test.tsx";
 
-
-// export async function getStaticProps() {
-  // const client = createClient({
-  //   space: process.env.CONTENTFUL_SPACE_ID,
-  //   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  // });
-
-  // console.log(client)
-
-  // const data = await client.getEntries();
-  // console.log(data.items)
-  // return false;
-
-  // return {
-  //   props: {
-  //     podcasts: data.items.filter(
-  //       (item) => item.sys.contentType.sys.id === "podcast"
-  //     ),
-  //     teamMembers: data.items.filter(
-  //       (item) => item.sys.contentType.sys.id === "teamMember"
-  //     ),
-  //     information: data.items.filter(
-  //       (item) => item.sys.contentType.sys.id === "information"
-  //     ),
-  //     seo: data.items.filter((item) => item.sys.contentType.sys.id === "seo"),
-  //     contactInfo: data.items.filter(
-  //       (item) => item.sys.contentType.sys.id === "contact"
-  //     ),
-  //   },
-  //   revalidate: 1,
-  // };
-// }
-
-export default function Home() {
+export default function Home({ store }) {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="good people only,good people commons,good people studio,good people artist management,the cabin recording,toronto,junction,creative,collective,artists,film"
+        />
+        <meta
+          name="description"
+          content="Creative collective based in Toronto, ON. Hosting artists and entrepreneurs in film, music, design, and tech."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:title" content="GOOD PEOPLE ONLY" />
+        <meta
+          property="og:description"
+          content="Creative collective based in Toronto, ON. Hosting artists and entrepreneurs in film, music, design, and tech. Desks available for rent. "
+        />
+        <meta
+          property="og:image"
+          content="https://pro2-bar-s3-cdn-cf6.myportfolio.com/f37e5fcc-8293-4aba-b0ef-f9139ce82753/7cc800bc-d19e-49bc-ac01-a8543ff25553_rw_600.png?h=bd99fb1f7bb5b6f66a398b08d6521a4a"
+        />
+        <link
+          rel="icon"
+          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTkSuQmCC"
+        />
+        <link rel="canonical" href="https://goodpeopleonly.com/" />
+        <title>GOOD PEOPLE ONLY</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      <div>
+        <h1>Good People Only</h1>
         <GlobalStyles />
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} />
           <Logo />
         </div>
         <Test />
-        {/* <div>
-          <h1>Hello. This is burger menu tutorial</h1>
-          <img
-            src="https://image.flaticon.com/icons/svg/2016/2016012.svg"
-            alt="burger icon"
-          />
-          <small>Icon made by Freepik from www.flaticon.com</small>
-        </div> */}
-        <div className={styles.container}>
-          {/* <Test /> */}
-          {/* <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}{" "}
-        </div>
-      </>
+        <div className={styles.container}></div>
+      </div>
     </ThemeProvider>
   );
+}
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const data = await client.getEntries();
+
+  return {
+    props: {
+      store: data.items.filter(
+        (item) => item.sys.contentType.sys.id === "store"
+      ),
+    },
+    revalidate: 1,
+  };
 }
