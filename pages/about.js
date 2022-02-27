@@ -26,14 +26,10 @@ export default function About({ about, goodSpaces, store }) {
   useEffect(() => {
     if (open) {
       const test = document.querySelector("#__next");
-      const container = document.querySelector(".container");
-      container.style.opacity = 0;
       test.style.overflow = "hidden";
       test.style.height = "100vh";
     } else {
       const test = document.querySelector("#__next");
-      const container = document.querySelector(".container");
-      container.style.opacity = 1;
       test.style.overflow = "visible";
       test.style.height = "auto";
     }
