@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledLogo = styled.button `
+export const StyledLogo = styled.button`
   position: absolute;
   top: 6%;
   right: 5rem;
@@ -43,5 +43,10 @@ export const StyledLogo = styled.button `
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    top: 4%;
+    right: 4rem;
   }
 `;

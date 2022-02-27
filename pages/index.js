@@ -12,11 +12,25 @@ import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Home.module.css";
 import { Test } from "../components/Test.tsx";
+import useWindowSize from "../utils/useWindowSize";
 
 export default function Home({ store }) {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 768) {
+      const test = document.querySelector("body");
+      test.style.position = "relative";
+      test.style.margin = "0";
+      test.style.overflowX = "hidden";
+      test.style.padding = "0";
+      test.style.height = "90vh";
+    }
+  }, [size]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -77,7 +91,7 @@ export default function Home({ store }) {
         <div ref={node}>
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} />
-          <Logo />
+          {/* <Logo /> */}
         </div>
         <Test />
 

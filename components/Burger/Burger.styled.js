@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledBurger = styled.button `
+export const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
   left: 2rem;
@@ -40,5 +40,10 @@ export const StyledBurger = styled.button `
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    left: 1rem;
+    top: 3%;
   }
 `;

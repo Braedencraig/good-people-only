@@ -19,10 +19,14 @@ export default function About({ consulting, store }) {
   useEffect(() => {
     if (open) {
       const test = document.querySelector("#__next");
+      const container = document.querySelector(".container");
+      container.style.opacity = 0;
       test.style.overflow = "hidden";
-      test.style.height = "80vh";
+      test.style.height = "100vh";
     } else {
       const test = document.querySelector("#__next");
+      const container = document.querySelector(".container");
+      container.style.opacity = 1;
       test.style.overflow = "visible";
       test.style.height = "auto";
     }
@@ -30,12 +34,12 @@ export default function About({ consulting, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div className="fadeIn">
         <div ref={node}>
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
         </div>
-        <div className={styles.container}>
+        <div className={`${styles.container} container`}>
           <div className={styles.title}>
             <h2> {title} </h2>
           </div>

@@ -1,32 +1,32 @@
 .container {
-    margin-top: 239px !important;
-    max-width: 1024px;
-    margin: 0 auto;
-    width: 100%;
-    font-family: "Montserrat", sans-serif;
-    padding: 0px 120px;
+  margin-top: 239px !important;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 120px;
 }
 
 .container h3 {
-    text-align: center;
-    margin-top: -20px;
-    position: relative;
-    z-index: 10;
+  text-align: center;
+  margin-top: -20px;
+  position: relative;
+  z-index: 10;
 }
 
 .card {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .card {
-        display: flex;
-        justify-content: center;
-    }
-    .container {
-        padding: 0 40px;
-    }
-    .container h3 {
-        margin-top: 26px;
-    }
+  .card {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .container h3 {
+    margin-top: 26px;
+  }
 }

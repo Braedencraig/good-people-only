@@ -26,10 +26,14 @@ export default function About({ about, goodSpaces, store }) {
   useEffect(() => {
     if (open) {
       const test = document.querySelector("#__next");
+      const container = document.querySelector(".container");
+      container.style.opacity = 0;
       test.style.overflow = "hidden";
-      test.style.height = "80vh";
+      test.style.height = "100vh";
     } else {
       const test = document.querySelector("#__next");
+      const container = document.querySelector(".container");
+      container.style.opacity = 1;
       test.style.overflow = "visible";
       test.style.height = "auto";
     }
@@ -37,21 +41,20 @@ export default function About({ about, goodSpaces, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div className="fadeIn">
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />{" "}
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
-        </div>{" "}
-        <div className={styles.container}>
+        </div>
+        <div className={`${styles.container} container`}>
           <div className={styles.title}>
-            <h2> {title} </h2> <h2 className={styles.subtitle}> {subtitle} </h2>{" "}
-          </div>{" "}
+            <h2> {title} </h2> <h2 className={styles.subtitle}> {subtitle} </h2>
+          </div>
           <div className={styles.flex}>
             <div className={styles.flexOne}>
               <div className={styles.goodSpaces}>
-                <p> Good Spaces </p>{" "}
+                <p> Good Spaces </p>
                 <ul>
-                  {" "}
                   {goodSpaces.map((space) => {
                     return (
                       <li key={space.fields.title}>
@@ -60,46 +63,41 @@ export default function About({ about, goodSpaces, store }) {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <img src="/images/link.png" alt="link" />{" "}
-                          {space.fields.title}{" "}
-                        </a>{" "}
+                          <img src="/images/link.png" alt="link" />
+                          {space.fields.title}
+                        </a>
                       </li>
                     );
-                  })}{" "}
-                </ul>{" "}
-              </div>{" "}
-            </div>{" "}
+                  })}
+                </ul>
+              </div>
+            </div>
             <div className={styles.flexTwo}>
               <div>
-                {" "}
                 {description.content.map((paragraph) => (
                   <p key={paragraph.content[0].value}>
-                    {" "}
-                    {paragraph.content[0].value}{" "}
+                    {paragraph.content[0].value}
                   </p>
-                ))}{" "}
-              </div>{" "}
+                ))}
+              </div>
               <div>
                 <h3 className={styles.descriptionTitle}>
-                  {" "}
                   {descriptionTitleFormat.content.map((node) => (
                     <span key={node.content[0].value}>
-                      {" "}
-                      {node.content[0].value}{" "}
+                      {node.content[0].value}
                     </span>
-                  ))}{" "}
-                </h3>{" "}
+                  ))}
+                </h3>
                 {descriptionTwo.content.map((paragraph) => (
                   <p key={paragraph.content[0].value}>
-                    {" "}
-                    {paragraph.content[0].value}{" "}
+                    {paragraph.content[0].value}
                   </p>
-                ))}{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </ThemeProvider>
   );
 }

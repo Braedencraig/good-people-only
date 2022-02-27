@@ -93,7 +93,9 @@ export const StyledMenu = styled.nav`
     }
   }
   @media only screen and (max-width: 768px) {
-    height: 80vh;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
     a {
       font-size: 2rem;
     }
