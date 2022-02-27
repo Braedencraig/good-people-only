@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { Suspense } from "react";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { browserName } from "react-device-detect";
 import {
   useCursor,
   MeshReflectorMaterial,
@@ -150,7 +151,12 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
     <group
       onClick={() => {
         setTimeout(() => {
-          window.open(props.site, "_blank");
+          console.log(browserName);
+          if (browserName === "Safari") {
+            window.location.href = props.site;
+          } else {
+            window.open(props.site, "_blank");
+          }
         }, 2000);
       }}
       {...props}
