@@ -45,7 +45,7 @@ export default function About({ consulting, store }) {
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
         </div>
-        <div className={`${styles.container} container`}>
+        <div className={`${styles.container} container fadeIn`}>
           <div className={styles.title}>
             <h2> {title} </h2>
           </div>

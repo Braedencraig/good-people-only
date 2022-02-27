@@ -402,7 +402,7 @@ export default function About({ contact, store }) {
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
         </div>
-        <div className={`${styles.container} container`}>
+        <div className={`${styles.container} container fadeIn`}>
           <div className={styles.flex}>
             <div id="wrap">
               <div className="glitch-card"> </div>
