@@ -16,8 +16,19 @@ export default function About({ contact, store }) {
   const { email, title } = contact[0].fields;
 
   useEffect(() => {
+    if (open) {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "hidden";
+      test.style.height = "80vh";
+    } else {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "visible";
+      test.style.height = "auto";
+    }
+  }, [setOpen, open]);
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
-      console.log(document);
       // updated to ES6 <3
       // check GLITCH.raf ;)
 

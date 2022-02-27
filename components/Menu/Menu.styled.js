@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.nav `
+export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -93,6 +93,7 @@ export const StyledMenu = styled.nav `
     }
   }
   @media only screen and (max-width: 768px) {
+    height: 80vh;
     a {
       font-size: 2rem;
     }

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
@@ -16,32 +16,42 @@ export default function About({ consulting, store }) {
 
   const { title, description, email } = consulting[0].fields;
 
+  useEffect(() => {
+    if (open) {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "hidden";
+      test.style.height = "80vh";
+    } else {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "visible";
+      test.style.height = "auto";
+    }
+  }, [setOpen, open]);
+
   return (
     <ThemeProvider theme={theme}>
       <div>
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />{" "}
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
-        </div>{" "}
+        </div>
         <div className={styles.container}>
           <div className={styles.title}>
-            <h2> {title} </h2>{" "}
-          </div>{" "}
+            <h2> {title} </h2>
+          </div>
           <div className={styles.flex}>
-            {" "}
             {description.content.map((paragraph) => (
               <p key={paragraph.content[0].value}>
-                {" "}
-                {paragraph.content[0].value}{" "}
+                {paragraph.content[0].value}
               </p>
-            ))}{" "}
+            ))}
             <div className={styles.bottom}>
               <img src="/images/envelope.png" alt="envelope" />
-              <a href={`mailto:${email}`}> {email} </a>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              <a href={`mailto:${email}`}> {email} </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </ThemeProvider>
   );
 }

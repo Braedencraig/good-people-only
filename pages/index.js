@@ -71,7 +71,7 @@ export default function Home({ store }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div>
+      <div className="home">
         <h1>Good People Only</h1>
         <GlobalStyles />
         <div ref={node}>

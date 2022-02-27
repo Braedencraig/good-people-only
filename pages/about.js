@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
@@ -22,6 +22,18 @@ export default function About({ about, goodSpaces, store }) {
     descriptionTitle,
     descriptionTitleFormat,
   } = about[0].fields;
+
+  useEffect(() => {
+    if (open) {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "hidden";
+      test.style.height = "80vh";
+    } else {
+      const test = document.querySelector("#__next");
+      test.style.overflow = "visible";
+      test.style.height = "auto";
+    }
+  }, [setOpen, open]);
 
   return (
     <ThemeProvider theme={theme}>
