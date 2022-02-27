@@ -18,15 +18,11 @@ export default function About({ contact, store }) {
   useEffect(() => {
     if (open) {
       const test = document.querySelector("#__next");
-      const container = document.querySelector(".container");
-      container.style.opacity = 0;
       test.style.overflow = "hidden";
       test.style.height = "100vh";
     } else {
       const test = document.querySelector("#__next");
-      const container = document.querySelector(".container");
       test.style.overflow = "visible";
-      container.style.opacity = 1;
       test.style.height = "auto";
     }
   }, [setOpen, open]);
@@ -391,25 +387,25 @@ export default function About({ contact, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="fadeIn">
+      <div>
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />{" "}
           <Burger open={open} setOpen={setOpen} /> <Logo />
-        </div>
+        </div>{" "}
         <div className={`${styles.container} container`}>
           <div className={styles.flex}>
             <div id="wrap">
-              <div className="glitch-card"> </div>
-            </div>
+              <div className="glitch-card"> </div>{" "}
+            </div>{" "}
             <div className={styles.card}>
               <img src="/images/envelope.png" alt="envelope" />
-            </div>
+            </div>{" "}
             <a className="contact" href={`mailto:${email}`}>
-              <h3> {email} </h3>
-            </a>
-          </div>
-        </div>
-      </div>
+              <h3> {email} </h3>{" "}
+            </a>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
     </ThemeProvider>
   );
 }
