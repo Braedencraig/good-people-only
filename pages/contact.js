@@ -64,7 +64,8 @@ export default function About({ contact, store }) {
     return new Promise((resolve, reject) => {
       if (!url) reject("Need img URL bro!");
 
-      const img = new Image();
+      // const img = new Image();
+      const img = document.createElement("img");
       img.crossOrigin = "Anonymous";
       img.onerror = () => reject("Image err!");
       img.onload = () => {
