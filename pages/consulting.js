@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Consulting.module.css";
+import useWindowSize from "../utils/useWindowSize";
 
 export default function About({ consulting, store }) {
   const [open, setOpen] = useState(false);
@@ -27,6 +28,15 @@ export default function About({ consulting, store }) {
       test.style.height = "auto";
     }
   }, [setOpen, open]);
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 768) {
+      const test = document.querySelector("body");
+      test.style.position = "initial";
+    }
+  }, [size]);
 
   return (
     <ThemeProvider theme={theme}>

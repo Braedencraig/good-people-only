@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Contact.module.css";
+import useWindowSize from "../utils/useWindowSize";
 
 export default function About({ contact, store }) {
   const [open, setOpen] = useState(false);
@@ -26,6 +27,15 @@ export default function About({ contact, store }) {
       test.style.height = "auto";
     }
   }, [setOpen, open]);
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 768) {
+      const test = document.querySelector("body");
+      test.style.position = "initial";
+    }
+  }, [size]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -389,23 +399,23 @@ export default function About({ contact, store }) {
     <ThemeProvider theme={theme}>
       <div>
         <div ref={node}>
-          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />{" "}
+          <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
-        </div>{" "}
+        </div>
         <div className={`${styles.container} container`}>
           <div className={styles.flex}>
             <div id="wrap">
-              <div className="glitch-card"> </div>{" "}
-            </div>{" "}
+              <div className="glitch-card"> </div>
+            </div>
             <div className={styles.card}>
               <img src="/images/envelope.png" alt="envelope" />
-            </div>{" "}
+            </div>
             <a className="contact" href={`mailto:${email}`}>
-              <h3> {email} </h3>{" "}
-            </a>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              <h3> {email} </h3>
+            </a>
+          </div>
+        </div>
+      </div>
     </ThemeProvider>
   );
 }

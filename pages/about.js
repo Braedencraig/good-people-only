@@ -8,11 +8,21 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/About.module.css";
+import useWindowSize from "../utils/useWindowSize";
 
 export default function About({ about, goodSpaces, store }) {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 768) {
+      const test = document.querySelector("body");
+      test.style.position = "initial";
+    }
+  }, [size]);
 
   const {
     title,

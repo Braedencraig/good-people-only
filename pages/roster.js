@@ -6,6 +6,7 @@ import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
 import RosterImages from "../components/RosterImages/RosterImages.js";
+import useWindowSize from "../utils/useWindowSize";
 
 function Roster({ artists, store }) {
   const pexel = (id) =>
@@ -76,6 +77,15 @@ function Roster({ artists, store }) {
       test.style.height = "auto";
     }
   }, [setOpen, open]);
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 768) {
+      const test = document.querySelector("body");
+      test.style.position = "initial";
+    }
+  }, [size]);
 
   return (
     <div>
