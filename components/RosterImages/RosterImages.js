@@ -152,9 +152,9 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
       onClick={() => {
         setTimeout(() => {
           console.log(browserName);
-          if (browserName === "Safari") {
-            document.location.assign(props.site);
-            // window.location.href = props.site;
+          if (browserName === "Safari" || browserName === "Mobile Safari") {
+            // document.location.assign(props.site);
+            window.location.href = props.site;
           } else {
             window.open(props.site, "_blank");
           }
