@@ -23,17 +23,19 @@ export const StyledSideText = styled.div`
   transform-origin: top right;
   h2 {
     transform: scaleX(-1);
+    font-size: 20px;
+    font-weight: 400;
   }
   .line {
     width: 100%;
-    height: 10px;
-    border: 2px solid #d8d8d8;
+    height: 2px;
+    border: 1px solid #d8d8d8;
     margin: 3px;
     /* display: inline-block; */
     /* left: -10%; */
     position: relative;
-    top: -53px;
-    right: 86%;
+    top: -32px;
+    right: 56%;
   }
   &:focus {
     outline: none;

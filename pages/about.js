@@ -99,6 +99,11 @@ export default function About({ about, goodSpaces, store }) {
                     {paragraph.content[0].value}
                   </p>
                 ))}
+                <div className={styles.images}>
+                  <img src="/images/canada.png" alt="Canada" />
+                  <img src="/images/oc.png" alt="Ontario Arts Council" />
+                  <img src="/images/factor.png" alt="Factor" />
+                </div>
               </div>
             </div>
           </div>

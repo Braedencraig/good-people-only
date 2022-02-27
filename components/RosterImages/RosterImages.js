@@ -23,7 +23,7 @@ export default function RosterImages({ images }) {
     <Canvas
       gl={{ alpha: false }}
       dpr={[1, 1.5]}
-      camera={{ fov: size.width < 768 ? 80 : 55, position: [0, 2, 15] }}
+      camera={{ fov: size.width < 768 ? 70 : 30, position: [0, 2, 15] }}
     >
       <color attach="background" args={["#000"]} />
       <fog attach="fog" args={["#191920", 0, 15]} />
@@ -31,7 +31,7 @@ export default function RosterImages({ images }) {
         <Environment preset="city" />
         <group position={[0, -0.75, 0]}>
           <Frames images={images} />
-          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.2, 0]}>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.2, 0]}>
             <planeGeometry args={[50, 50]} />
             <MeshReflectorMaterial
               blur={[600, 100]}
@@ -59,12 +59,14 @@ function TextScene({ name }) {
     <Suspense fallback={null}>
       <Text
         ref={ref}
-        maxWidth={200}
+        font="/fonts/reg400.ttf"
+        maxWidth={180}
+        fontWeight={700}
         anchorX="center"
         textAlign={"center"}
         anchorY="middle"
-        position={[0, 1.4, 0]}
-        fontSize={0.12}
+        position={[0, 0.2, 0]}
+        fontSize={0.1}
       >
         {name}
       </Text>
@@ -81,11 +83,15 @@ function Frames({
   const clicked = useRef();
   const [, params] = useRoute("/item/:id");
   const [, setLocation] = useLocation();
+  const size = useWindowSize();
+
   useEffect(() => {
     clicked.current = ref.current.getObjectByName(params?.id);
     if (clicked.current) {
       clicked.current.parent.updateWorldMatrix(true, true);
-      clicked.current.parent.localToWorld(p.set(0, GOLDENRATIO / 2, 1.55));
+      clicked.current.parent.localToWorld(
+        p.set(0, GOLDENRATIO / 2, size.width < 768 ? 1.5 : 2.9)
+      );
       clicked.current.parent.getWorldQuaternion(q);
     } else {
       p.set(0, 0, 5.5);
@@ -99,12 +105,14 @@ function Frames({
   return (
     <group
       ref={ref}
-      onClick={(e) => (
-        e.stopPropagation(),
-        setLocation(
-          clicked.current === e.object ? "/" : "/item/" + e.object.name
-        )
-      )}
+      onClick={(e) => {
+        return (
+          e.stopPropagation(),
+          setLocation(
+            clicked.current === e.object ? "/" : "/item/" + e.object.name
+          )
+        );
+      }}
       onPointerMissed={() => setLocation("/")}
     >
       {images.map(
@@ -139,7 +147,14 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
     );
   });
   return (
-    <group {...props}>
+    <group
+      onClick={() => {
+        setTimeout(() => {
+          window.open(props.site, "_blank");
+        }, 2000);
+      }}
+      {...props}
+    >
       <mesh
         name={name}
         onPointerOver={(e) => (e.stopPropagation(), hover(true))}

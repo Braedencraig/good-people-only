@@ -19,11 +19,11 @@ export const StyledMenu = styled.nav`
     width: 100%;
   }
   a {
-    font-size: 5rem;
     text-transform: uppercase;
     width: fit-content;
     padding: 0.25rem 0;
-    font-weight: bold;
+    font-size: 75px;
+    font-weight: 400;
     letter-spacing: 0.5rem;
     color: #d8d8d8;
     position: relative;
@@ -32,9 +32,6 @@ export const StyledMenu = styled.nav`
     :nth-child(2) {
       svg.circle {
         top: -15%;
-      }
-      svg:scratch-out {
-        top: 33%;
       }
     }
     @keyframes sign {
@@ -45,18 +42,6 @@ export const StyledMenu = styled.nav`
     svg {
       width: 100%;
       height: auto;
-    }
-    svg.scratch-out {
-      position: absolute;
-      top: 40%;
-      left: 0;
-      right: 0;
-      z-index: 10;
-    }
-    :hover {
-      svg.scratch-out {
-        display: none;
-      }
     }
     svg.circle {
       position: absolute;

@@ -5,7 +5,9 @@ import { Plane, useTexture, Box } from '@react-three/drei';
 
 export const ImagePlane: VFC = () => {
 	const path = (name: string) => `/images/${name}.png`;
-	const textures = useTexture([path('black'), path('gpo'), path('black')])
+	// const textures = useTexture([path('black'), path('gpo'), path('black')])
+	const textures = useTexture([path('gpo')])
+
 
 	const material = (texture: THREE.Texture) =>
 		new THREE.ShaderMaterial({
@@ -19,7 +21,8 @@ export const ImagePlane: VFC = () => {
 	return (
 		<>
 			{textures.map((texture, i) => (
-				<Plane key={i} material={material(texture)} scale={0.98} position={[i - 1, 0, 0]} />
+				<Plane key={i} material={material(texture)} scale={0.98} position={[0, 0, 0]} />
+				// <Plane key={i} material={material(texture)} scale={0.98} position={[i - 1, 0, 0]} />
 			))}
 		</>
 	)
