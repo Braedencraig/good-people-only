@@ -14,11 +14,9 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 12;
-
   &:focus {
     outline: none;
   }
-
   div {
     width: 3rem;
     height: 0.25rem;
@@ -27,11 +25,9 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
-
     :nth-child(2) {
       opacity: ${({ open }) => (open ? "0" : "1")};
       transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
@@ -41,7 +37,6 @@ export const StyledBurger = styled.button`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-
   @media only screen and (max-width: 768px) {
     left: 1rem;
     top: 3%;

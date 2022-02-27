@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSideText = styled.div `
+export const StyledSideText = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -21,11 +21,9 @@ export const StyledSideText = styled.div `
   z-index: 10;
   transform: rotate(90deg) scaleX(-1);
   transform-origin: top right;
-
   h2 {
     transform: scaleX(-1);
   }
-
   .line {
     width: 100%;
     height: 10px;
@@ -37,7 +35,6 @@ export const StyledSideText = styled.div `
     top: -53px;
     right: 86%;
   }
-
   &:focus {
     outline: none;
   }
