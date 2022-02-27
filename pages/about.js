@@ -37,7 +37,7 @@ export default function About({ about, goodSpaces, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="fadeIn">
+      <div>
         <div ref={node}>
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
           <Burger open={open} setOpen={setOpen} /> <Logo />
