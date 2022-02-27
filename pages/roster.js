@@ -8,18 +8,6 @@ import { useOnClickOutside } from "../hooks.js";
 import RosterImages from "../components/RosterImages/RosterImages.js";
 
 function Roster({ artists, store }) {
-  useEffect(() => {
-    if (open) {
-      const test = document.querySelector("#__next");
-      test.style.overflow = "hidden";
-      test.style.height = "80vh";
-    } else {
-      const test = document.querySelector("#__next");
-      test.style.overflow = "visible";
-      test.style.height = "auto";
-    }
-  }, [setOpen, open]);
-
   const pexel = (id) =>
     `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
   const images = [
