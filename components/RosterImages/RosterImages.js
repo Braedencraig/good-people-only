@@ -110,7 +110,7 @@ function Frames({
         return (
           e.stopPropagation(),
           setLocation(
-            clicked.current === e.object ? "/" : "/item/" + e.object.name
+            (browserName !== "Safari" || browserName !== "Safari Mobile") && clicked.current === e.object ? "/" : "/item/" + e.object.name
           )
         );
       }}
