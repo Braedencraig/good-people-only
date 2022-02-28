@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Contact.module.css";
-import HeadInfo from "../components/Head/Head.js";
+import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 import useWindowSize from "../utils/useWindowSize";
 
 export default function About({ contact, store }) {

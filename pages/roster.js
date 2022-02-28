@@ -6,7 +6,7 @@ import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
 import Jukebox from "../components/Jukebox/Jukebox.js";
-import HeadInfo from "../components/Head/Head.js";
+import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 // import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
 

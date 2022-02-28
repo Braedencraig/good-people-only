@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import favicon from "../public/favicon.ico";
-import HeadInfo from "../components/Head.js";
+import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 import { createClient } from "contentful";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";

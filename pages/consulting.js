@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
-import HeadInfo from "../components/Head/Head.js";
+import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 import { createClient } from "contentful";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";

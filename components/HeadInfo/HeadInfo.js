@@ -28,9 +28,8 @@ function HeadInfo() {
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTkSuQmCC"
       />
       <link rel="canonical" href="https://goodpeopleonly.com/" />
-      <title>GOOD PEOPLE ONLY</title>
+      <title> GOOD PEOPLE ONLY </title>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -52,7 +51,6 @@ function HeadInfo() {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
-      <title>GOOD PEOPLE ONLY</title>
     </Head>
   );
 }
