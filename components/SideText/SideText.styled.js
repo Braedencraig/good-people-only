@@ -6,19 +6,19 @@ export const StyledSideText = styled.div`
   }
   position: absolute;
   color: #d8d8d8;
-  top: 20%;
-  left: -15.5rem;
+  top: 15%;
+  left: -25rem;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 20rem;
+  width: 29rem;
   height: 3rem;
   background: transparent;
   border: none;
   cursor: default;
   padding: 0;
-  z-index: 10;
+  z-index: 2;
   transform: rotate(90deg) scaleX(-1);
   transform-origin: top right;
   h2 {
@@ -35,7 +35,7 @@ export const StyledSideText = styled.div`
     /* left: -10%; */
     position: relative;
     top: -32px;
-    right: 56%;
+    right: 40%;
   }
   &:focus {
     outline: none;

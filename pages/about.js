@@ -100,9 +100,13 @@ export default function About({ about, goodSpaces, store }) {
                   </p>
                 ))}
                 <div className={styles.images}>
-                  <img src="/images/canada.png" alt="Canada" />
-                  <img src="/images/oc.png" alt="Ontario Arts Council" />
-                  <img src="/images/factor.png" alt="Factor" />
+                  <div className={styles.top}>
+                    <img src="/images/oc.png" alt="Ontario Arts Council" />
+                    <img src="/images/factor.png" alt="Factor" />
+                  </div>
+                  <div className={styles.bottom}>
+                    <img src="/images/canada.png" alt="Canada" />
+                  </div>
                 </div>
               </div>
             </div>

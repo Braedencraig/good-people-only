@@ -79,11 +79,23 @@
 
 .images {
   display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.images .top {
+  display: flex;
   justify-content: space-between;
 }
 
-.images img {
-  width: 30%;
+.images .top img {
+  width: 50%;
+}
+
+.images .bottom img {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .goodSpaces img {

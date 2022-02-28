@@ -1,0 +1,108 @@
+.box.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist p {
+  font-size: 35px;
+  text-align: center;
+  opacity: 0;
+}
+
+.box {
+  padding: 0.5rem;
+  height: 100vh;
+}
+
+.artist {
+  transform-origin: 75% 50%;
+  transform: translate3d(0, 0, 0) perspective(15vw) rotateY(10deg);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.artist:hover,
+.active {
+  z-index: 3;
+  position: relative;
+  transform: scale(1.4);
+}
+
+.artist:hover p,
+.active p {
+  opacity: 1;
+}
+
+.last {
+  margin-right: -80px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .artist img {
+    max-width: 285px;
+  }
+  .artist p {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .artist img {
+    max-width: 240px;
+  }
+  .artist p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .artist img {
+    max-width: 260px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .box.flex {
+    flex-direction: column;
+    margin-top: 160px;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+  }
+  .artist p {
+    opacity: 1;
+  }
+  .artist {
+    transform: inherit;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .artist img {
+    max-width: 400px;
+  }
+  .last {
+    margin-right: 0;
+  }
+  .artist p {
+    font-size: 35px;
+  }
+  .box {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box.flex {
+    margin-top: 100px;
+  }
+  .artist img {
+    max-width: 300px;
+  }
+  .artist:hover,
+  .active {
+    transform: scale(1);
+  }
+}

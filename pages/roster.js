@@ -5,12 +5,13 @@ import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
-import RosterImages from "../components/RosterImages/RosterImages.js";
+import Jukebox from "../components/Jukebox/Jukebox.js";
+// import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
 
 function Roster({ artists, store }) {
-  const pexel = (id) =>
-    `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
+  // const pexel = (id) =>
+  //   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
   const images = [
     // Front
     {
@@ -95,12 +96,13 @@ function Roster({ artists, store }) {
       <div ref={node}>
         <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
         <Burger open={open} setOpen={setOpen} /> <Logo />
-        <SideText />
       </div>
-      <div className="container">
-        <Suspense fallback={<div> Loading... </div>}>
+      <div>
+        <SideText />
+        <Jukebox images={images} />
+        {/* <Suspense fallback={<div> Loading... </div>}>
           {images && <RosterImages images={images} />}
-        </Suspense>
+        </Suspense> */}
       </div>
     </div>
   );
