@@ -6,6 +6,7 @@ import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
 import Jukebox from "../components/Jukebox/Jukebox.js";
+import Head from "../components/Head/Head.js";
 // import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
 
@@ -93,6 +94,7 @@ function Roster({ artists, store }) {
 
   return (
     <div>
+      <Head />
       <div ref={node}>
         <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
         <Burger open={open} setOpen={setOpen} /> <Logo />
