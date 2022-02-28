@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-function Head() {
+function HeadInfo() {
   return (
     <Head>
       <meta charSet="UTF-8" />
@@ -57,4 +57,4 @@ function Head() {
   );
 }
 
-export default Head;
+export default HeadInfo;

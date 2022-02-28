@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import favicon from "../public/favicon.ico";
-import Head from "../components/Head.js";
+import HeadInfo from "../components/Head.js";
 import { createClient } from "contentful";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
@@ -33,7 +33,7 @@ export default function Home({ store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Head />
+      <HeadInfo />
       <div className="home">
         <h1>Good People Only</h1>
         <GlobalStyles />

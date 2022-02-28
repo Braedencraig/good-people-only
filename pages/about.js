@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Burger from "../components/Burger/Burger.js";
 import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
-import Head from "../components/Head/Head.js";
+import HeadInfo from "../components/Head/Head.js";
 
 import Image from "next/image";
 import { createClient } from "contentful";
@@ -49,7 +49,7 @@ export default function About({ about, goodSpaces, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Head />
+      <HeadInfo />
       <div>
         <div ref={node}>
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />

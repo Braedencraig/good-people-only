@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../theme.js";
 import { useOnClickOutside } from "../hooks.js";
 import styles from "../styles/Contact.module.css";
-import Head from "../components/Head/Head.js";
+import HeadInfo from "../components/Head/Head.js";
 import useWindowSize from "../utils/useWindowSize";
 
 export default function About({ contact, store }) {
@@ -222,7 +222,7 @@ export default function About({ contact, store }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Head />
+      <HeadInfo />
       <div>
         <div ref={node}>
           <Menu open={open} setOpen={setOpen} store={store[0].fields.url} />
