@@ -18,7 +18,7 @@ export const StyledLogo = styled.button`
     outline: none;
   }
   img {
-    max-width: 100px;
+    max-width: 90px;
   }
   div {
     width: 2rem;
