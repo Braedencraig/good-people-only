@@ -22,6 +22,8 @@ export default function About({ about, goodSpaces, store }) {
   useEffect(() => {
     if (size.width < 768) {
       const test = document.querySelector("body");
+      test.style.overflow = "auto";
+      test.style.overflowX = "hidden";
       test.style.position = "initial";
     }
   }, [size]);
