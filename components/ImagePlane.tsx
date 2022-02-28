@@ -5,7 +5,7 @@ import { Plane, useTexture, Box } from '@react-three/drei';
 
 export const ImagePlane: VFC = () => {
 	const path = (name: string) => `/images/${name}.png`;
-	const textures = useTexture([path('gpo')])
+	const textures = useTexture([path('good')])
 
 	const material = (texture: THREE.Texture) =>
 		new THREE.ShaderMaterial({
