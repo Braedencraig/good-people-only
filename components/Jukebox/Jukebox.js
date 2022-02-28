@@ -29,7 +29,7 @@ export default function Jukebox({ images }) {
                     }
                   }}
                 >
-                  <img src={url} />
+                  <img src={url} alt={name} />
                   <p>{name}</p>
                 </a>
               );
