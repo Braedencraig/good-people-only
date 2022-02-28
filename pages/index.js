@@ -25,7 +25,7 @@ export default function Home({ store }) {
       const test = document.querySelector("body");
       test.style.position = "relative";
       test.style.margin = "0";
-      test.style.overflowX = "hidden";
+      test.style.overflow = "hidden";
       test.style.padding = "0";
       test.style.height = "90vh";
     }
