@@ -38,9 +38,9 @@ const Menu = ({ open, store }) => {
           </svg>
         </a>
       </Link>
-      <Link href="/consulting">
-        <a href="/">
-          Consulting
+      <Link href="/about">
+        <a>
+          About
           <svg
             width="373px"
             height="84px"
@@ -100,9 +100,9 @@ const Menu = ({ open, store }) => {
           </g>
         </svg>
       </a>
-      <Link href="/about">
-        <a>
-          About
+      <Link href="/consulting">
+        <a href="/">
+          Consulting
           <svg
             width="373px"
             height="84px"
