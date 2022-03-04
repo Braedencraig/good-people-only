@@ -131,7 +131,7 @@ const Menu = ({ open, store }) => {
             </g>
           </svg>
         </a>
-      </Link>np
+      </Link>
       <Link href="/contact">
         <a>
           Contact
