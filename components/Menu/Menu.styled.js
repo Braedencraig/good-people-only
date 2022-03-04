@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav `
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
     position: relative;
     text-decoration: none;
     transition: color 0.3s linear;
-    :nth-child(2) {
+    :nth-child(4) {
       svg.circle {
         top: -15%;
       }
