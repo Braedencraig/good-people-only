@@ -1,159 +1,173 @@
 .container {
-  margin-top: 120px !important;
-  max-width: 1024px;
-  margin: 0 auto;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  padding: 0px 120px;
+    margin-top: 120px !important;
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    padding: 0px 120px;
 }
 
 .title {
-  margin-bottom: 43px;
-  cursor: default;
-  font-size: 35px;
-  font-weight: 400;
+    margin-bottom: 43px;
+    cursor: default;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 .title h2 {
-  font-size: 35px;
-  font-weight: 400;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 .descriptionTitle {
-  margin-bottom: 43px;
-  font-size: 35px;
-  font-weight: 400;
+    margin-bottom: 43px;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 .subtitle {
-  width: 40%;
-  cursor: default;
-  font-size: 35px;
-  font-weight: 400;
+    width: 40%;
+    cursor: default;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .goodSpaces ul {
-  list-style-type: none;
-  padding: 0;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  margin-top: 26px;
-  font-weight: 500;
-  border-bottom: 1px solid #d8d8d8;
-  width: 100%;
+    list-style-type: none;
+    padding: 0;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-top: 26px;
+    font-weight: 500;
+    border-bottom: 1px solid #d8d8d8;
+    width: 100%;
 }
 
 .goodSpaces li {
-  text-decoration: underline;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 26px;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 26px;
 }
 
 .goodSpaces li:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .goodSpaces a {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .goodSpaces p {
-  text-transform: uppercase;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 15px 0;
-  cursor: default;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  width: 100%;
-  cursor: default;
+    text-transform: uppercase;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 15px 0;
+    cursor: default;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    cursor: default;
 }
 
 .images {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
+    display: flex;
+    flex-direction: column;
 }
 
+.images img {
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+
+/* 
 .images .top {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+
+.images .top .oc {
+    width: 60%;
 }
 
 .images .top img {
-  width: 50%;
+    width: 40%;
 }
 
 .images .bottom img {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-}
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+} */
 
 .goodSpaces img {
-  margin-right: 17.5px;
+    margin-right: 17.5px;
 }
 
 .flexOne {
-  width: 33%;
+    width: 33%;
 }
 
 .flexTwo {
-  width: 66%;
-  margin-bottom: 50px;
-  margin-left: 70px;
+    width: 66%;
+    margin-bottom: 50px;
+    margin-left: 70px;
 }
 
 .flexTwo span {
-  display: block;
+    display: block;
 }
 
 .flexTwo p {
-  margin-bottom: 26px;
-  line-height: 1.6;
-  cursor: default;
-  margin-top: 0;
-  font-weight: 500;
-  font-size: 18px;
+    margin-bottom: 26px;
+    line-height: 1.6;
+    cursor: default;
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .descriptionTitle {
-  margin-bottom: 26px;
-  cursor: default;
+    margin-bottom: 26px;
+    cursor: default;
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
-  .title h2 {
-    font-size: 35px;
-    font-weight: 400;
-  }
-  .title :first-child {
-    padding-right: 90px;
-  }
-  .flex {
-    flex-direction: column;
-  }
-  .flexOne,
-  .flexTwo {
-    width: 100%;
-  }
-  .flexTwo {
-    margin-left: 0;
-    margin-top: 46px;
-  }
-  .descriptionTitle {
-    font-size: 30px;
-    font-weight: 400;
-  }
+    .container {
+        padding: 0 20px;
+    }
+    .title h2 {
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .title :first-child {
+        padding-right: 90px;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .flexOne,
+    .flexTwo {
+        width: 100%;
+    }
+    .flexTwo {
+        margin-left: 0;
+        margin-top: 46px;
+    }
+    .descriptionTitle {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .images img {
+        max-width: 240px;
+        margin-bottom: 30px;
+    }
 }
