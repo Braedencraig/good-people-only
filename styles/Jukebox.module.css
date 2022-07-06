@@ -5,7 +5,7 @@
 }
 
 .artist p {
-    font-size: 35px;
+    font-size: 26px;
     text-align: center;
     opacity: 0;
 }
@@ -22,11 +22,14 @@
     z-index: 1;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    max-width: 300px !important;
+    max-height: 300px !important;
 }
 
 .artist img {
-    max-width: 392px;
-    max-height: 409px;
+    max-width: 300px !important;
+    max-height: 300px !important;
+    /* image-rendering: -webkit-optimize-contrast; */
 }
 
 .artist:hover,
@@ -54,6 +57,31 @@
     }
 }
 
+@media only screen and (max-width: 1400px) {
+    .artist img {
+        max-width: 260px !important;
+        max-height: 260px !important;
+    }
+    .artist {
+        max-width: 260px !important;
+        max-height: 260px !important;
+    }
+    .artist p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .artist img {
+        max-width: 240px !important;
+        max-height: 240px !important;
+    }
+    .artist {
+        max-width: 240px !important;
+        max-height: 240px !important;
+    }
+}
+
 @media only screen and (max-width: 1100px) {
     .artist img {
         max-width: 240px;
@@ -63,30 +91,45 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .artist img {
-        max-width: 260px;
-    }
-}
-
 @media only screen and (max-width: 930px) {
+    .artist {
+        transform-origin: unset;
+    }
+    .artist:hover,
+    .active {
+        z-index: 3;
+        position: relative;
+        transform: scale(1.1);
+    }
     .box.flex {
         flex-direction: column;
         margin-top: 160px;
         justify-content: flex-start;
         margin-bottom: 80px;
+        padding: 0;
     }
     .artist p {
         opacity: 1;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px solid white;
+        background: black;
+        margin: -4px;
     }
     .artist {
         transform: inherit;
-        border-bottom: 1px solid white;
-        margin-bottom: 40px;
-        margin-top: 20px;
+        /* border-bottom: 1px solid white; */
+        /* margin-bottom: 40px; */
+        /* margin-top: 20px; */
+        margin-bottom: 160px;
     }
     .artist img {
-        max-width: 400px;
+        max-width: 400px !important;
+        max-height: 400px !important;
+    }
+    .artist {
+        max-width: 400px !important;
+        max-height: 400px !important;
     }
     .last {
         margin-right: 0;
@@ -104,7 +147,15 @@
         margin-top: 100px;
     }
     .artist img {
-        max-width: 300px;
+        max-width: 300px !important;
+        max-height: 300px !important;
+    }
+    .artist {
+        max-width: 300px !important;
+        max-height: 300px !important;
+    }
+    .artist p {
+        font-size: 28px;
     }
     .artist:hover,
     .active {

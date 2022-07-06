@@ -13,9 +13,7 @@ export default function Jukebox({ images }) {
               const imageRef = useRef();
               return (
                 <a
-                  className={`${name === middle.name && styles.active} ${
-                    styles.artist
-                  } ${images.length === i + 1 && styles.last}`}
+                  className={`${name === middle.name && styles.active} ${styles.artist} ${images.length === i + 1 && styles.last}`}
                   href={site}
                   ref={imageRef}
                   key={name}
@@ -29,8 +27,7 @@ export default function Jukebox({ images }) {
                     }
                   }}
                 >
-                  <img src={url} alt={name} />
-                  <p>{name}</p>
+                  <img src={url} alt={name} /> <p> {name} </p>
                 </a>
               );
             })}

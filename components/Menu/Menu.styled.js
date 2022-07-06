@@ -29,7 +29,12 @@ export const StyledMenu = styled.nav `
     position: relative;
     text-decoration: none;
     transition: color 0.3s linear;
-    :nth-child(4) {
+    :nth-child(1) {
+      svg.circle {
+        top: -15%;
+      }
+    }
+    :nth-child(5) {
       svg.circle {
         top: -15%;
       }

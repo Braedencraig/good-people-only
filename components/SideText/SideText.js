@@ -1,10 +1,10 @@
 import React from "react";
 import { StyledSideText } from "./SideText.styled";
 
-const SideText = () => {
+const SideText = ({ copy, lineSize }) => {
   return (
     <StyledSideText>
-      <h2> ARTIST ROSTER </h2> <div className="line"> </div>
+      <h2> {copy} </h2> <div className={`line ${lineSize}`}> </div>
     </StyledSideText>
   );
 };

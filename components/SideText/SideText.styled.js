@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSideText = styled.div`
+export const StyledSideText = styled.div `
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -39,5 +39,14 @@ export const StyledSideText = styled.div`
   }
   &:focus {
     outline: none;
+  }
+  .artists {
+    width: 70% !important;
+    right: 46% !important;
+  }
+
+  .label {
+    width: 90% !important;
+    right: 46% !important;
   }
 `;
