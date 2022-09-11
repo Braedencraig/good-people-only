@@ -6,6 +6,8 @@ import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
 import Jukebox from "../components/Jukebox/Jukebox.js";
+import ImageSquares from "../components/ImageSquares/index.jsx";
+
 import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 // import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
@@ -110,7 +112,7 @@ function RecordLabel({ artists, store }) {
       </div>
       <div>
         <SideText lineSize="label" copy={"Good People Record Co."} />
-        <Jukebox images={images} />
+        <ImageSquares images={images} />
         {/* <Suspense fallback={<div> Loading... </div>}>
           {images && <Roster Images images={images} />}
         </Suspense> */}
@@ -131,8 +133,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      artists: data.items.filter((item) => item.sys.contentType.sys.id === "label"),
-      store: data.items.filter((item) => item.sys.contentType.sys.id === "store"),
+      artists: data.items.filter(
+        (item) => item.sys.contentType.sys.id === "label"
+      ),
+      store: data.items.filter(
+        (item) => item.sys.contentType.sys.id === "store"
+      ),
     },
     revalidate: 1,
   };

@@ -5,7 +5,9 @@ import Menu from "../components/Menu/Menu.js";
 import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
-import Jukebox from "../components/Jukebox/Jukebox.js";
+// import Jukebox from "../components/Jukebox/Jukebox.js";
+import ImageSquares from "../components/ImageSquares/index.jsx";
+
 import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 // import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
@@ -103,7 +105,7 @@ function Roster({ artists, store }) {
       </div>
       <div>
         <SideText />
-        <Jukebox images={images} />
+        <ImageSquares images={images} />
         {/* <Suspense fallback={<div> Loading... </div>}>
           {images && <RosterImages images={images} />}
         </Suspense> */}

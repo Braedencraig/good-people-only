@@ -6,6 +6,7 @@ import Logo from "../components/Logo/Logo.js";
 import SideText from "../components/SideText/SideText.js";
 import { useOnClickOutside } from "../hooks.js";
 import Jukebox from "../components/Jukebox/Jukebox.js";
+import ImageSquares from "../components/ImageSquares/index.jsx";
 import HeadInfo from "../components/HeadInfo/HeadInfo.js";
 // import RosterImages from "../components/RosterImages/RosterImages.js";
 import useWindowSize from "../utils/useWindowSize";
@@ -109,8 +110,11 @@ function Management({ artists, store }) {
         <Burger open={open} setOpen={setOpen} /> <Logo />
       </div>
       <div>
-        <SideText lineSize={"artists"} copy={"Good People Artists Management"} />
-        <Jukebox images={images} />
+        <SideText
+          lineSize={"artists"}
+          copy={"Good People Artists Management"}
+        />
+        <ImageSquares images={images} />
         {/* <Suspense fallback={<div> Loading... </div>}>
           {images && <RosterImages images={images} />}
         </Suspense> */}
@@ -131,8 +135,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      artists: data.items.filter((item) => item.sys.contentType.sys.id === "management"),
-      store: data.items.filter((item) => item.sys.contentType.sys.id === "store"),
+      artists: data.items.filter(
+        (item) => item.sys.contentType.sys.id === "management"
+      ),
+      store: data.items.filter(
+        (item) => item.sys.contentType.sys.id === "store"
+      ),
     },
     revalidate: 1,
   };
