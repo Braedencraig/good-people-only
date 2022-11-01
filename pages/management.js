@@ -53,6 +53,13 @@ function Management({ artists, store }) {
     // },
     // // Right
     {
+      position: [0, 0, 1.5],
+      rotation: [0, 0, 0],
+      url: artists[4].fields.image.fields.file.url,
+      name: artists[4].fields.name,
+      site: artists[4].fields.site,
+    },
+    {
       position: [-1, 0, 1.8],
       rotation: [0, -Math.PI / 3.5, 0],
       url: artists[1].fields.image.fields.file.url,
