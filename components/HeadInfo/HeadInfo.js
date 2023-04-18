@@ -7,7 +7,7 @@ function HeadInfo() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="keywords"
-        content="good people only,good people commons,good people studio,good people artist management,the cabin recording,toronto,junction,creative,collective,artists,film"
+        content="good people only,Good people record co.,Good people records,Good people record label,Good people good kid,Good kid record label,Good Kid label,Jeremie Albino label,Jeremie Albino record label,Benjamin Dakota rogers label,Benjamin Dakota Rogers record label,Sister ray label,Sister ray record label,Benja label,Benja record label,good people commons,good people studio,good people artist management,the cabin recording,toronto,junction,creative,collective,artists,film"
       />
       <meta
         name="description"
