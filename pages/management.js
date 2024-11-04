@@ -27,13 +27,13 @@ function Management({ artists, store }) {
     // { position: [-0.8, 0, -0.6], rotation: [0, 0, 0], url: pexel(416430) },
     // { position: [0.8, 0, -0.6], rotation: [0, 0, 0], url: pexel(310452) },
     // // Left
-    {
-      position: [-1, 0, 1.8],
-      rotation: [0, Math.PI / 3.5, 0],
-      url: artists[3].fields.image.fields.file.url,
-      name: artists[3].fields.name,
-      site: artists[3].fields.site,
-    },
+    // {
+    //   position: [-1, 0, 1.8],
+    //   rotation: [0, Math.PI / 3.5, 0],
+    //   url: artists[3].fields.image.fields.file.url,
+    //   name: artists[3].fields.name,
+    //   site: artists[3].fields.site,
+    // },
     {
       position: [-1, 0, 1.8],
       rotation: [0, Math.PI / 3.5, 0],
@@ -52,13 +52,13 @@ function Management({ artists, store }) {
     //   url: pexel(358574),
     // },
     // // Right
-    {
-      position: [0, 0, 1.5],
-      rotation: [0, 0, 0],
-      url: artists[4].fields.image.fields.file.url,
-      name: artists[4].fields.name,
-      site: artists[4].fields.site,
-    },
+    // {
+    //   position: [0, 0, 1.5],
+    //   rotation: [0, 0, 0],
+    //   url: artists[4].fields.image.fields.file.url,
+    //   name: artists[4].fields.name,
+    //   site: artists[4].fields.site,
+    // },
     {
       position: [-1, 0, 1.8],
       rotation: [0, -Math.PI / 3.5, 0],
